@@ -1,0 +1,12 @@
+name: Install Python dependencies
+runs:
+  using: composite
+  steps:
+    - name: Create Python virtualenv
+      run: |
+        mkdir -p ~/venv
+        python3.7 -m venv ~/venv;
+      shell: bash
+    - name: Install requirements
+      run: ~/venv/bin/pip install -r requirements/development.txt
+      shell: bash
