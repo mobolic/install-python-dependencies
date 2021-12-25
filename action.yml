@@ -15,7 +15,7 @@ runs:
     - name: Create Python virtualenv
       run: |
         mkdir -p ${{ inputs.virtualenv-location }}
-        python3.7 -m venv ${{ inputs.virtualenv-location }};
+        python3 -m venv ${{ inputs.virtualenv-location }};
       shell: bash
     - name: Install requirements
       run: ${{ inputs.virtualenv-location }}/bin/pip install -r ${{ inputs.requirements-file }}
